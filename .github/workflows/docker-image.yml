@@ -10,7 +10,7 @@ jobs:
 
   build:
 
-    runs-on: aws-ubuntu
+    runs-on: Linux
 
     steps:
    # - uses: actions/checkout@v3
