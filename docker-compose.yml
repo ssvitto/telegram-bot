@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  telega-bot:
+    image: my_bot
+    container_name: telega-bot
+    # ports:
+    #   - 8032:80
+    volumes:
+      - /home/ssvitto/scaner/Bot/share:/share
