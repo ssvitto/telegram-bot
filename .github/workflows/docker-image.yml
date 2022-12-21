@@ -25,4 +25,4 @@ jobs:
      steps:
      - uses: actions/checkout@v3
      - name: run the Docker image
-       run: docker run -d --rm --restart=always--name=telegabot my-bot
+       run: docker run -d --rm --name=telegabot my-bot
