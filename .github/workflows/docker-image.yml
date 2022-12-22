@@ -28,3 +28,17 @@ jobs:
        run: |
             docker stop telegabot
             docker run -d --rm --name=telegabot my-bot
+            
+  push: 
+
+
+     runs-on: Linux
+     needs: [build]
+     steps:
+     - uses: actions/checkout@v3
+     - name: push image
+       run: |
+            aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin 039153635201.dkr.ecr.eu-west-3.amazonaws.com
+            docker tag my-botlatest 039153635201.dkr.ecr.eu-west-3.amazonaws.com/my-bot:latest
+            docker push 039153635201.dkr.ecr.eu-west-3.amazonaws.com/my-bot:latest
+    
