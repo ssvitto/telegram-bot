@@ -10,7 +10,8 @@ jobs:
 
   build:
 
-    runs-on: Linux
+    #runs-on: Linux
+    runs-on: ubuntu-latest
 
     steps:
     #- uses: actions/checkout@v3
